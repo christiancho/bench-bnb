@@ -1,0 +1,65 @@
+header {
+  background-color: #6C997A;
+  border-bottom: 5px solid #4C795A;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header h1 {
+  color: #F0F0F0;
+  float: left;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.user-bar {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+}
+
+.user-bar * {
+  display: inline;
+}
+
+.user-bar a, .user-bar input[type=submit] {
+  background-color: #38CC65;
+  border: 0px;
+  border-bottom: 5px solid #18AC45;
+  border-radius: 3px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0px 10px;
+  outline: none;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.user-bar a {
+  top: 10px;
+}
+
+.user-bar a:active {
+  border-bottom: none;
+  top: 15px;
+}
+
+.user-bar input[type=submit]:active {
+  border-bottom: none;
+  bottom: -3px;
+}
+
+.user-bar a:hover, .user-bar input[type=submit]:hover {
+  background-color: #28BC55;
+}
+
+.username {
+  color: #EFEFEF;
+}

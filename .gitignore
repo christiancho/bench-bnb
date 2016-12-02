@@ -7,14 +7,21 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
 
-# Ignore bundle files
-bundle.js
-bundle.map.js
+# Ignore application configuration
+/config/application.yml
 
-# Ignore node_module files
-node_modules/
+# Ignore node modules
+node_modules
+
+# Ignore bundle
+bundle.js
+bundle.js.map
