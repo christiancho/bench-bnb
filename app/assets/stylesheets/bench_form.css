@@ -1,0 +1,51 @@
+.bench-form {
+  border-bottom: 5px solid #AAA;
+  border-radius: 3px;
+  background-color: #DDD;
+  margin: 30px auto;
+  min-height: 350px;
+  padding: 20px;
+  position: relative;
+  width: 400px;
+}
+
+.bench-form label {
+  margin: 10px 0px;
+}
+
+.bench-input {
+  border: 1px solid #BBB;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 10px 0px;
+  outline: none;
+  padding: 10px 5px 5px 5px;
+  position: relative;
+  width: 100%;
+}
+
+.bench-form input[type=submit] {
+  background-color: #38CC65;
+  border: 0px;
+  border-bottom: 5px solid #18AC45;
+  border-radius: 3px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 10px 0px;
+  outline: none;
+  padding: 5px 10px;
+  position: relative;
+  width: 100%;
+}
+
+.bench-form input[type=submit]:active {
+  border-bottom: none;
+  bottom: -5px;
+}
+
+.bench-form input[type=submit]:hover {
+  background-color: #28BC55;
+}
