@@ -3,6 +3,23 @@ export default class MarkerManager {
   constructor(map) {
     this.map = map;
     this.markers = {};
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(id) {
+    const marker = this.markers[id];
+    this.map.panTo(marker.getPosition());
+    marker.infoBox.open(this.map, marker);
+    this.closeOtherBoxes(id);
+  }
+
+  closeOtherBoxes(openId){
+    const markers = Object.assign( {}, this.markers );
+    delete markers[openId];
+    Object.keys(markers).forEach( id => {
+      markers[id].infoBox.close();
+    });
   }
 
   _benchesToAdd(benches){
@@ -22,6 +39,10 @@ export default class MarkerManager {
       title: bench.description
     });
     marker.id = bench.id;
+    marker.infoBox = new google.maps.InfoWindow({
+      content: marker.title
+    });
+    marker.addListener('click', this.handleClick.bind(null, marker.id));
     this.markers[bench.id] = marker;
   }
 
